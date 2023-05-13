@@ -13,6 +13,7 @@
 
 
 import './App.css';
+import Header from './components/Header';
 import Nav from './components/Nav';
 import MemeGenerator from './components/MemeGenerator';
 
@@ -21,6 +22,7 @@ function App() {
     
     <>
       <Nav/>
+      <Header/>
       <MemeGenerator/>
     </>
   );

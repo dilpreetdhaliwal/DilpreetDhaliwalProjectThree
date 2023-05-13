@@ -48,12 +48,11 @@ const MemeGenerator = () => {
   };
 
   const handleText1Change = e => {
-    setText0(e.target.value);
+    setText1(e.target.value);
   };
 
   return (
-    <div>
-      <h1>Meme Generator</h1>
+    <div className="wrapperMeme">
 
 
       {selectedTemplate && (
@@ -62,20 +61,20 @@ const MemeGenerator = () => {
           <div className="textInputs">
             <input 
               type="text" 
-              placeholder="Enter top text" 
+              placeholder="Enter text value #1" 
               value={text0} 
               onChange={handleText0Change}
-              maxLength={20}
+              maxLength={30}
             />
-            <span>{text0.length}/{20}</span>
+            <span>{text0.length}/{30}</span>
             <input 
               type="text" 
-              placeholder="Enter bottom text" 
+              placeholder="Enter text value #2" 
               value={text1} 
               onChange={handleText1Change}
-              maxLength={20}
+              maxLength={30}
             />
-            <span>{text1.length}/{20}</span>
+            <span>{text1.length}/{30}</span>
           </div>
           <button onClick={createMeme}>Create Meme</button>
         </div>

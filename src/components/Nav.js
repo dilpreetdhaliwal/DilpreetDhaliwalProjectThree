@@ -2,12 +2,15 @@
 
 const Nav = () => {
     return (
-        <nav className="wrapper">
-            <ul>
-                <li>Home</li>
-                <li>Refresh</li>
-            </ul>
-        </nav>
+        <div className="navBar">
+            <div className="wrapperNav navigation">
+                <ul>
+                    <li>Home</li>
+                    <li>Templates</li>
+                    <li>Refresh</li>
+                </ul>
+            </div>
+        </div>
     )
 }
 
