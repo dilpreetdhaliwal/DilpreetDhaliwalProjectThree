@@ -13,17 +13,22 @@
 
 
 import './App.css';
-import Header from './components/Header';
-import Nav from './components/Nav';
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
 import MemeGenerator from './components/MemeGenerator';
+import Nav from "./components/Nav"
+import Header from "./components/Header"
 
 function App() {
   return (
-    
     <>
       <Nav/>
-      <Header/>
-      <MemeGenerator/>
+      
+      
+      <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="/templatelist" element={<MemeGenerator />} />
+      </Routes>
     </>
   );
 }

@@ -1,5 +1,6 @@
 
-
+import { Link, Route, Routes } from "react-router-dom";
+import MemeGenerator from "./MemeGenerator";
 
 const Header = () => {
     return (
@@ -8,7 +9,9 @@ const Header = () => {
                 <h1>Create My Meme</h1>
                 <h2>The ultimate meme creator website for all the internet warriors out there.</h2>
                 <p>Express your creativity and humor with our extensive collection of meme templates. Whether you're a fan of classic memes or you want to create the next viral sensation, Create My Meme has got you covered. So, what are you waiting for? Get ready to unleash your inner meme master and let the world laugh with you!</p>
-                <a href="">View Templates</a>
+                <Link to="/templatelist">View All Templates</Link>
+
+                
             </div>
         </header>
     )

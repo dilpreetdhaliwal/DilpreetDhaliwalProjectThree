@@ -77,9 +77,6 @@ header {
   width: 100%;
   background-size: cover;
   background-position: center;
-  border-bottom: solid 3px #5d3838;
-  margin-bottom: 30px;
-  z-index: 999;
 }
 
 .headerFlex {
@@ -120,16 +117,15 @@ h2 {
 .templatesContainer {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-  margin-left: auto;
+  margin-top: calc(40vh + 71px);
 }
 
 .templateItem {
   display: flex;
-  width: 100%;
+  width: 32%;
   align-items: center;
   padding: 2px;
-  margin: 5px 0;
+  margin: 5px 5px;
   border: dashed 1px #5d3838;
 }
 
@@ -151,11 +147,20 @@ h2 {
 }
 
 .selectedTemplate {
-  max-width: 40%;
+  height: 40vh;
   position: fixed;
   left: 5%;
-  top: 25%;
-  z-index: 1;
+  right: 5%;
+  top: 0%;
+  display: flex;
+  margin-top: 70px;
+  justify-content: space-around;
+  background-color: #e9e7ea;
+}
+
+.selectedTemplate img {
+  height: 60%;
+  margin: auto 0;
 }
 
 .selectedTemplate input {
@@ -168,6 +173,22 @@ h2 {
   margin-left: 3px;
 }
 
+.textInputs {
+  margin: auto 0;
+}
+
+
+/* -------- USER GENERATED MEME  -------- */
+.generatedMeme {
+  height: 40vh;
+  margin-top: calc(40vh + 71px);
+  display: flex;
+}
+
+.generatedMeme img {
+  height: 60%;
+  margin: auto;
+}
 
 /* font-family: 'Oi', cursive;
     font-family: 'Shrikhand', cursive; 

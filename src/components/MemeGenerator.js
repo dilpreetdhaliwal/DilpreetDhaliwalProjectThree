@@ -1,5 +1,6 @@
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
 
 const MemeGenerator = () => {
   const [templates, setTemplates] = useState([]);
@@ -7,6 +8,7 @@ const MemeGenerator = () => {
   const [memeUrl, setMemeUrl] = useState("");
   const [text0, setText0] = useState("");
   const [text1, setText1] = useState("");
+  const [showTemplates, setShowTemplates] = useState(true);
 
   // Fetch meme templates from the Imgflip API (using result to extract data)
   useEffect(() => {
@@ -21,6 +23,7 @@ const MemeGenerator = () => {
 
   const createMeme = () => {
     console.log("CREATE MEME");
+    setShowTemplates(false);
     const params = new URLSearchParams({
       template_id: selectedTemplate.id,
       username: "DilpreetDhaliwal1",
@@ -52,8 +55,25 @@ const MemeGenerator = () => {
   };
 
   return (
-    <div className="wrapperMeme">
+    <div className="wrapper">
 
+      {memeUrl && (
+        <div className="generatedMeme">
+          <img src={memeUrl} alt="User created meme" />
+        </div>
+      )}
+
+      {showTemplates && (
+      <div className="templatesContainer">
+        {templates.map(template => (
+          <div key={template.id} className="templateItem" onClick={() => handleTemplateChange(template)}>
+            <img src={template.url} alt={template.name} />
+            <p>{template.name}</p>
+          </div>
+        ))}
+      </div>
+
+      )}
 
       {selectedTemplate && (
         <div className="selectedTemplate">
@@ -75,25 +95,11 @@ const MemeGenerator = () => {
               maxLength={30}
             />
             <span>{text1.length}/{30}</span>
+            <button onClick={createMeme}>Create Meme</button>
           </div>
-          <button onClick={createMeme}>Create Meme</button>
-        </div>
-      )}
-
-      {memeUrl && (
-        <div className="generatedMeme">
-          <img src={memeUrl} alt="User created meme" />
         </div>
       )}
       
-      <div className="templatesContainer">
-        {templates.map(template => (
-          <div key={template.id} className="templateItem" onClick={() => handleTemplateChange(template)}>
-            <img src={template.url} alt={template.name} />
-            <p>{template.name}</p>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };
