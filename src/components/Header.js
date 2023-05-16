@@ -1,6 +1,6 @@
 
-import { Link, Route, Routes } from "react-router-dom";
-import MemeGenerator from "./MemeGenerator";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
     return (

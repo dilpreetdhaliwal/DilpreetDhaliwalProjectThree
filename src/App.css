@@ -237,7 +237,6 @@ h2 {
     padding-top: 100px;
     font-size: 4.6rem;
   }
-  
   .templateItem {
     width: 90%;
     margin: 5px auto;
@@ -274,7 +273,6 @@ h2 {
     margin-bottom: 4px;
     padding: 1px;
   }
-  
   .textInputs button {
     margin: 5px auto;
     background-color: #fdef20;
@@ -283,8 +281,6 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-
-
 }
 
 @media (max-width: 400px) {
@@ -298,6 +294,9 @@ h2 {
     margin-top: calc(40vh + 71px);
   }
 }
+
+
+
 /* font-family: 'Oi', cursive;
     font-family: 'Shrikhand', cursive; 
     font-family: 'Fredoka', sans-serif;*/
