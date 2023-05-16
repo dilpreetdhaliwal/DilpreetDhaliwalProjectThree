@@ -13,7 +13,7 @@ html { box-sizing: border-box;}
 body {
   font-size: 18px;
   font-family: "Fredoka", sans-serif;
-  background-color: #e9e7ea;
+  background-color: #000;
 }
 
 .wrapper {
@@ -40,7 +40,7 @@ img {
   right: 0;
   left: 0;
   height: 71px;
-  background-color: #fff;
+  background-color: #000;
   z-index: 2;
 }
 
@@ -57,14 +57,30 @@ img {
   right: 0;
   left: 0;
   height: 70px;
-  background-color: #fff;
+  background-color: #000;
 }
 
 .navigation ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
+}
+
+.homeNav {
+  font-family: 'Oi', cursive;
+  text-shadow: -1px -1px 0 #fdef20, 1px -1px 0 #fdef20, -1px 1px 0 #fdef20, 1px 1px 0 #fdef20;
+  text-decoration: none;
+  color: #000;
+}
+
+.refreshNav {
+  font-family: 'Oi', cursive;
+  text-shadow: -1px -1px 0 #fdef20, 1px -1px 0 #fdef20, -1px 1px 0 #fdef20, 1px 1px 0 #fdef20;
+  text-decoration: none;
+  color: #000;
+  font-size: 2.8rem;
+  cursor: pointer;
 }
 
 
@@ -72,7 +88,7 @@ img {
 /* -------- HEADER -------- */
 header {
   margin-top: 70px;
-  background: url(../src/components/assets/chuttersnap-hqVGQ4-D0NI-unsplash.jpg);
+  background: url(../src/components/assets/domingo-alvarez-e-Cs3y8Mn6-Gk-unsplash.jpg);
   height: calc(100vh - 70px);
   width: 100%;
   background-size: cover;
@@ -87,7 +103,7 @@ h1 {
   font-family: 'Oi', cursive;
   font-size: 5rem;
   padding-top: 200px;
-  text-shadow: -1px -1px 0 #936165, 1px -1px 0 #936165, -1px 1px 0 #936165, 1px 1px 0 #936165;
+  text-shadow: -1px -1px 0 #fdef20, 1px -1px 0 #fdef20, -1px 1px 0 #fdef20, 1px 1px 0 #fdef20;
 }
 
 h2 {
@@ -105,12 +121,13 @@ h2 {
   text-decoration: none;
   padding: 9px 13px;
   border-radius: 5px;
-  color: #5d3838;
+  color: #000;
   width: fit-content;
+  text-shadow: -1px -1px 0 #fdef20, 1px -1px 0 #fdef20, -1px 1px 0 #fdef20, 1px 1px 0 #fdef20;
 }
 
 .headerFlex  a:hover {
-  border: solid 2px #5d3838;
+  border: solid 2px #fdef20;
 }
 
 /* -------- TEMPLATE LIST -------- */
@@ -118,19 +135,21 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(40vh + 71px);
+  color: #fff;
+  justify-content: space-around;
 }
 
 .templateItem {
   display: flex;
-  width: 32%;
+  width: 47%;
   align-items: center;
   padding: 2px;
   margin: 5px 5px;
-  border: dashed 1px #5d3838;
+  border: dashed 1px #fdef20;
 }
 
 .templateItem:hover {
-  border: solid 1px #5d3838;
+  border: solid 1px #fdef20;
   cursor: pointer;
 }
 
@@ -155,26 +174,44 @@ h2 {
   display: flex;
   margin-top: 70px;
   justify-content: space-around;
-  background-color: #e9e7ea;
+  background-color: #000;
 }
 
 .selectedTemplate img {
   height: 60%;
-  margin: auto 0;
-}
-
-.selectedTemplate input {
-  margin: 6px 0 3px 0;
-  width: 94%;
+  margin: auto 20px auto 0;
 }
 
 .selectedTemplate span {
   font-size: 0.6rem;
   margin-left: 3px;
+  color: #fff;
 }
 
 .textInputs {
   margin: auto 0;
+}
+
+.textInputs input {
+  margin: 6px 0 3px 0;
+  padding: 5px;
+  width: 94%;
+  border: solid 1px #fdef20;
+}
+
+.textInputs button {
+  margin: 20px auto;
+  background-color: #fdef20;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.textInputs button:hover,
+.textInputs button:focus {
+  background-color: #000;
+  color: #fdef20;
 }
 
 
@@ -190,6 +227,77 @@ h2 {
   margin: auto;
 }
 
+
+/* -------- 
+    MEDIA QUERIES  
+-------- */
+
+@media (max-width: 800px) {
+  h1 {
+    padding-top: 100px;
+    font-size: 4.6rem;
+  }
+  
+  .templateItem {
+    width: 90%;
+    margin: 5px auto;
+  }
+  .textInputs input {
+    width: 85%;
+  }
+  .templatesContainer {
+    margin-top: calc(40vh + 97px);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    padding-top: 35px;
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .selectedTemplate {
+    flex-direction: column;
+    left: 10%;
+    right: 10%;
+    justify-content: center;
+    height: 42vh;
+  }
+  .selectedTemplate img {
+    height: auto;
+    width: 50%;
+    margin: 10px auto 15px auto;
+  }
+  .textInputs input {
+    margin-bottom: 4px;
+    padding: 1px;
+  }
+  
+  .textInputs button {
+    margin: 5px auto;
+    background-color: #fdef20;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .templatesContainer {
+    margin-top: calc(40vh + 71px);
+  }
+}
 /* font-family: 'Oi', cursive;
     font-family: 'Shrikhand', cursive; 
     font-family: 'Fredoka', sans-serif;*/
