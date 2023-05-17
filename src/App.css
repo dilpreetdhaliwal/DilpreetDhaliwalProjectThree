@@ -271,7 +271,7 @@ h2 {
     height: 42vh;
   }
   .selectedTemplate img {
-    height: auto;
+    max-width: 100%;
     width: 50%;
     margin: 10px auto 15px auto;
   }
