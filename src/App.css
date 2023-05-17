@@ -124,6 +124,7 @@ h2 {
   color: #000;
   width: fit-content;
   text-shadow: -1px -1px 0 #fdef20, 1px -1px 0 #fdef20, -1px 1px 0 #fdef20, 1px 1px 0 #fdef20;
+  font-size: 1.7rem;
 }
 
 .headerFlex  a:hover {
@@ -206,12 +207,17 @@ h2 {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Oi', cursive;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  padding-top: 6px;
+  text-transform: uppercase;
 }
 
 .textInputs button:hover,
 .textInputs button:focus {
   background-color: #000;
   color: #fdef20;
+  text-shadow: -1px -1px 0 #8d8404, 1px -1px 0 #8d8404, -1px 1px 0 #8d8404, 1px 1px 0 #8d8404;
 }
 
 
@@ -280,6 +286,10 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    padding-top: 3.5px;
+  }
+  .headerFlex  a {
+    font-size: 1.3rem;
   }
 }
 

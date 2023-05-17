@@ -36,7 +36,6 @@ const MemeGenerator = () => {
     fetch(`https://api.imgflip.com/caption_image?${params}`)
       .then(response => response.json())
       .then(data => {
-        console.log("data:", data);
         setMemeUrl(data.data.url);
       })
       .catch(error => console.error(error));
