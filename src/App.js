@@ -24,7 +24,6 @@ function App() {
     <>
       <Nav/>
       
-      
       <Routes>
         <Route path="/" element={<Header />} />
         <Route path="/templatelist" element={<MemeGenerator />} />

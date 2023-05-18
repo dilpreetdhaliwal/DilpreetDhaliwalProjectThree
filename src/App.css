@@ -207,7 +207,6 @@ h2 {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Oi', cursive;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   padding-top: 6px;
   text-transform: uppercase;
